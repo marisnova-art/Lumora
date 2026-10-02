@@ -1,0 +1,13 @@
+# Edge Function settings for `supabase functions deploy`.
+# The Stripe webhook authenticates with its signature, so JWT verification is disabled for it only.
+[functions.payments-webhook]
+verify_jwt = false
+
+[functions.create-checkout]
+verify_jwt = true
+
+[functions.ai-jobs]
+verify_jwt = true
+
+[functions.delete-account]
+verify_jwt = true
